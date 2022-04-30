@@ -54,8 +54,6 @@ const Saga = () => {
         setSearchInfo(wiki.query.searchinfo)
     }
 
-
-
     return (
         <>
             <header>
@@ -67,6 +65,8 @@ const Saga = () => {
                         value={search}
                         onChange={e => setSearch(e.target.value)}
                     />
+                    <button type="button" onClick={clearAllWiki} className="btn btn-danger">clear all</button>
+
                 </form>
                 {(searchInfo.totalhits) ? <p>Search Results:{searchInfo.totalhits} </p> : ''}
             </header>
@@ -113,16 +113,13 @@ const Saga = () => {
 
                     </>
 
-            <button type="button" onClick={clearAllWiki} className="btn btn-danger">clear all</button>
-
-
             <Pagination
                 countPages={countPages}
                 totalResult={results.length}
                 paginate={paginate}
+                nextPage={nextPage}
+                prevPage={prevPage}
             />
-            <button className='btn btn-primary' onClick={prevPage}>Prev page</button>
-            <button className='btn btn-primary ms-2' onClick={nextPage}>Next page</button>
         </>
     );
 };

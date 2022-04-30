@@ -62,6 +62,7 @@ const Header = () => {
                         value={search}
                         onChange={e => setSearch(e.target.value)}
                     />
+                    <button type="button" onClick={clearAllWiki} className="btn btn-danger">clear all</button>
                 </form>
                 {(searchInfo.totalhits) ? <p>Search Results:{searchInfo.totalhits} </p> : ''}
             </header>
@@ -82,7 +83,6 @@ const Header = () => {
                         </div>
                     )
                 })}
-                <button type="button" onClick={clearAllWiki} className="btn btn-danger">clear all</button>
             </div>
 
 

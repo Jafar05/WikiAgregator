@@ -1,0 +1,3 @@
+# WikiAgregator
+Installation
+npm install

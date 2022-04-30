@@ -3,7 +3,7 @@ import {GET_TITLE} from "../types/wiki.types";
 
 
 const searchFetch = async(search) => {
-    const response = await fetch(`https://ru.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&
+    const response = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&
         utf8=&format=json&origin=*&srlimit=30&srsearch=${search}`)
     return response.json()
 }

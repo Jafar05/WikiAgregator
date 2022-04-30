@@ -116,6 +116,7 @@ const Header = () => {
                 paginate={paginate}
                 nextPage={nextPage}
                 prevPage={prevPage}
+                className="pagination"
             />
         </>
     );

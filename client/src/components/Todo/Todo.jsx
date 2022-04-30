@@ -37,10 +37,10 @@ const Todo = () => {
 
             <ul className="list-group">
                 {todo.map((todo,index) => {
-                    return(  <ul>
-                        <h2 key={todo.id}>{index}</h2>
+                    return(  <ul key={todo.id}>
+                        <h2>{index}</h2>
                         {/*<Link to={`/onetodo/${todo.id}`}>*/}
-                        <div key={todo.id}>
+                        <div>
                             <h1>{todo.text}</h1></div>
                         {/*</Link>*/}
                         {/*<button onClick={() => remove(todo.id)} type="button" className="btn btn-danger">Danger</button>                   <button onClick={() => remove(todo.id)} type="button" className="btn btn-danger">Danger</button>*/}

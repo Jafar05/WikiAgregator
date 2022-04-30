@@ -57,7 +57,7 @@ const Saga = () => {
     return (
         <>
             <header>
-                <h1 className="h1">Wikipedia Saga</h1>
+                <h1 className="h1">Wikipedia Saga In English</h1>
                 <form className="search-box" onSubmit={handleSearch}>
                     <input
                         type="search"
@@ -110,16 +110,18 @@ const Saga = () => {
                                 </div>
                             )
                         })}
+                        <Pagination
+                            countPages={countPages}
+                            totalResult={results.length}
+                            paginate={paginate}
+                            nextPage={nextPage}
+                            prevPage={prevPage}
+                            className="pagination"
+                        />
 
                     </>
 
-            <Pagination
-                countPages={countPages}
-                totalResult={results.length}
-                paginate={paginate}
-                nextPage={nextPage}
-                prevPage={prevPage}
-            />
+
         </>
     );
 };
